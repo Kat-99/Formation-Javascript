@@ -77,11 +77,28 @@ unNombre = parseInt (unNombre);
 console.log (unNombre);
 console.log (typeof unNombre);
 
-//Pour converitr un nombre à virgule (appelé Float)
+//Pour convertir un nombre à virgule (appelé Float)
 unNombre = "12.55";
 unNombre = parseFloat (unNombre);
 console.log (unNombre);
 console.log (typeof unNombre)
+
+//Pour convertir un nombre entier ou float en string.
+unNombre = 10;
+var unString = unNombre.toString();
+console.log = (unString);
+console.log = (typeof unString);
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*------------------------------------------------------------------------------\
