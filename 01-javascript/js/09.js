@@ -4,9 +4,9 @@
 
 //--1. Boucle for
 
-for (let i=0 ; i<=10 ; i++) // si on voulait incrémenter de deux, on aurait pu écrire direct i+2.
+for (let i = 0; i <= 10; i++) // si on voulait incrémenter de deux, on aurait pu écrire direct i+2.
 {
-    document.write ('<p>Instruction executée : <strong>' + i + '</strong></p>');
+    document.write('<p>Instruction executée : <strong>' + i + '</strong></p>');
 }
 
 /**
@@ -17,14 +17,14 @@ for (let i=0 ; i<=10 ; i++) // si on voulait incrémenter de deux, on aurait pu 
 /* ⚠ let est la nouvelle appellation de var avec ECMA 6. var est amené à disparaître donc
 vaut mieux prendre les bonnes habitudes dès maintenant. */
 
-document.write ('<hr>'); // <--- <hr> permet de faire une ligne horizontale (vient du html)
+document.write('<hr>'); // <--- <hr> permet de faire une ligne horizontale (vient du html)
 
 
 //--2. Boucle let-while 
 
 let j = 0;
 while (j <= 10) {
-    document.write ('<p>Instruction executée : <strong>' + j + '</strong></p>');
+    document.write('<p>Instruction executée : <strong>' + j + '</strong></p>');
     j++
 }
 /**
@@ -51,9 +51,8 @@ const Prenoms = ["Jean", "Marc", "Matthieu", "Paul", "Luc", "Hugo", "Jacques"];
  * dans la console, ou sur votre page.
  */
 
-for(let k = 0; k < Prenoms.length; k++)
-{
-     document.write('<p>Instruction executée : <strong>' + Prenoms[k] + '</strong></p>');
+for (let k = 0; k < Prenoms.length; k++) {
+    document.write('<p>Instruction executée : <strong>' + Prenoms[k] + '</strong></p>');
 }
 
 /*------------------------------------------
@@ -62,26 +61,26 @@ for(let k = 0; k < Prenoms.length; k++)
 
 //Manuellement dans la console
 
-console.log (Prenoms [0]);
-console.log (Prenoms [1]);
-console.log (Prenoms [2]);
-console.log (Prenoms [3]);
-console.log (Prenoms [4]);
-console.log (Prenoms [5]);
-console.log (Prenoms [6]);
-console.log ("--------------------")
+console.log(Prenoms[0]);
+console.log(Prenoms[1]);
+console.log(Prenoms[2]);
+console.log(Prenoms[3]);
+console.log(Prenoms[4]);
+console.log(Prenoms[5]);
+console.log(Prenoms[6]);
+console.log("--------------------")
 
 //Automatique avec une boucle
 
-for (let index=0; index <=6 ; index++ ) {
-    console.log (Prenoms [ index] );
+for (let index = 0; index <= 6; index++) {
+    console.log(Prenoms[index]);
 }
 
 //Variante, calcul automatique de la dimension du tableau.
-console.log ('-------------------')
+console.log('-------------------')
 
 for (let index = 0; index < Prenoms.length; index++) {
-    console.log (Prenoms [index]);
+    console.log(Prenoms[index]);
 }
 
 /*------------------------------------------
@@ -94,56 +93,52 @@ Faire une boucle qui permet d'additionner toutes ces valeurs.
 1. Prendre chaque élément séparément
 2. Additonner le total  */
 
-const nombres = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 //--1. Déclarer une variable permettant de garder en memoire la somme
-let resultat = 0; 
+let resultat = 0;
 
 //--2. Créer une boucle permettant d'attionner les nombres
-for (let nb = 0; nb < nombres.length; nb++)
-{
+for (let nb = 0; nb < nombres.length; nb++) {
     //On sait que i prendra successivement les valeurs de 0...10
     //Comment additionner les valeurs?
-    resultat = (nombres [nb] + resultat);
-    resultat += nombres [nb] //il va rajouter tout en incrémentant à la valeur de nb, le résultat
+    resultat = (nombres[nb] + resultat);
+    resultat += nombres[nb] //il va rajouter tout en incrémentant à la valeur de nb, le résultat
 }
-console.log (nombres);
+console.log(nombres);
 
 /*------------------------------------------
       EXERCICE : VOS MEILLEURS CHOIX
 ------------------------------------------*/
 
-    /*
-    Crée un tableau qui contetient 3 nom d'acteurs
-    Pour chaque acteur, affichez dans la console par exemple : "Le numero 1 est Stalone"
+/*
+Crée un tableau qui contetient 3 nom d'acteurs
+Pour chaque acteur, affichez dans la console par exemple : "Le numero 1 est Stalone"
 
-    Bonus : transformez en : "Le premier est Stalone", Le deuxième est Cruiz", etc...
-    */
+Bonus : transformez en : "Le premier est Stalone", Le deuxième est Cruiz", etc...
+*/
 
-let acteurs = ["Kim Jae Wook", "Yoo Seung Ho" , "Ji Chang Wook"];
+let acteurs = ["Kim Jae Wook", "Yoo Seung Ho", "Ji Chang Wook"];
 
 let rang = 1
 
-for (let act = 0; act <3; act++)
-
-{console.log ("Le numéro "+ rang++ + " est " + acteurs [act])
+for (let act = 0; act < 3; act++) {
+    console.log("Le numéro " + rang++ + " est " + acteurs[act])
 }
 
 
-console.log ("-----------")
+console.log("-----------")
 
 
 
 let rang2 = ["premier", "deuxième", "troisème"]
 
-for (let act = 0; act <3; act++)
-
-{console.log ("Le " + rang2 [act] + " est " + acteurs [act])} //une même boucle peut être utilisée pour plusieurs tableau.
-                                                              //donc act va s'appliquer et pour le premier et le deuxième tableau.
+for (let act = 0; act < 3; act++) { console.log ("Le " + rang2[act] + " est " + acteurs[act]) } //une même boucle peut être utilisée pour plusieurs tableau.
+//donc act va s'appliquer et pour le premier et le deuxième tableau.
 
 
 
-console.log ("-----------")
+console.log("-----------")
 
 
 /*------------------------------------------
@@ -159,8 +154,66 @@ console.log ("-----------")
     Servez-vous d'un tableau pour stocker les noms des mois.
 */
 
-let mois = (new Date).getMonth ()
+let mois = (new Date).getMonth()
 
-months = ["Janvier", "Février","Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
 
-console.log (months [mois]) //Je veux récupérer dans 'months' la valeur du mois qui se trouve à l'index 'mois' (parce que getmonth c'est un index).
+console.log(months[mois]) //Je veux récupérer dans 'months' la valeur du mois qui se trouve à l'index 'mois' (parce que getmonth c'est un index).
+
+
+
+
+
+/* -- 
+CONSIGNE : 
+
+A partir du tableau "baseDeDonnees" fourni, vous devez mettre en place un système d'authentification. 
+Après avoir demandé à votre utilisateur son EMAIL et MOT DE PASSE, 
+et après avoir vérifié ses informations, vous lui souhaiterez la bienvenue 
+avec son nom et prénom (document.write); 
+
+En cas d'échec, vous afficherez une ALERT pour l'informer de l'erreur. 
+-- */
+
+const baseDeDonnees = [
+    { 'prenom': 'Hugo', 'nom': 'LIEGEARD', 'email': 'wf3@hl-media.fr', 'mdp': 'wf3' },
+    { 'prenom': 'Rodrigue', 'nom': 'NOUEL', 'email': 'rodrigue@hl-media.fr', 'mdp': 'wf3' },
+    { 'prenom': 'Nathanael', 'nom': 'ORDONNE', 'email': 'nathanael.d@hl-media.fr', 'mdp': 'wf3' }
+];
+
+console.log(baseDeDonnees[0]);
+
+let tab = baseDeDonnees[0];
+let tab2 = baseDeDonnees[1];
+let tab3 = baseDeDonnees[2];
+
+
+let emailut = prompt("votre email", "<votre email>");
+let mdput = prompt("entrez votre mot de passe", "<mot de passe>")
+
+
+if (emailut === tab[2] && mdput === tab[3]) {
+    document.write("Bienvenue " + tab[0] + " " + tab[1] + " !")
+}
+else { alert("Vos informations ne figurent pas dans notre base de données") }
+
+//------------------
+
+let emailut2 = prompt("votre email", "<votre email>");
+let mdput2 = prompt("entrez votre mot de passe", "<mot de passe>");
+
+
+if (emailut2 === tab2[2] && mdput2 === tab2[3]) {
+    document.write("Bienvenue " + tab2[0] + " " + tab2[1] + " !")
+}
+else { alert ("Vos informations ne figurent pas dans notre base de données") }
+
+//------------------
+
+let emailut3 = prompt("votre email", "<votre email>");
+let mdput3 = prompt("entrez votre mot de passe", "<mot de passe>");
+
+if (emailut3 === tab3[2] && mdput3 === tab3[3]) {
+    document.write("Bienvenue " + tab3[0] + " " + tab3[1] + " !")
+}
+else { alert("Vos informations ne figurent pas dans notre base de données") }
